@@ -2,7 +2,6 @@ var express = require("express");
 
 var router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
 var note = require("../models/nueschool.js");
 
 router.get("/", function(req, res) {
@@ -17,8 +16,6 @@ router.get("/", function(req, res) {
 
 
 router.post("/api/notes", function(req, res) {
-  // console.log(req);
-
   note.insertOne("name", "note", req.body.note, function(result) {
     // Send back the ID of the new note
     console.log(result);
@@ -28,10 +25,8 @@ router.post("/api/notes", function(req, res) {
 
 router.put("/api/notes/:id", function(req, res) {
   var condition = "id = " + req.params.id;
-
   console.log("condition", condition);
   console.log(req.body.note);
-
   note.updateOne(req.body.note, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
@@ -44,7 +39,6 @@ router.put("/api/notes/:id", function(req, res) {
 
 router.delete("/api/notes/:id", function(req, res) {
   var condition = "id = " + req.params.id;
-
   note.delete(condition, function(result) {
     if (result.affectedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404

@@ -2,28 +2,13 @@
 <!--Fixed navigation bar and elements-->
 <div class="navbar-fixed center">
     <nav>
-        <div class="nav-wrapper indigo lighten-1">
+        <div class="nav-wrapper grey darken-2">
             <a href="#!" class="brand-logo">NueSchool(LOGO)</a>
             <ul class="right hide-on-med-and-down"> 
-
-            <a class="waves-effect waves-light btn">button</a>
-            <a class="waves-effect waves-light btn">button</a>
-            <a class="waves-effect waves-light btn">button</a>
    </nav>
 </div>
 
-<!--Search bar-->
-<div class="nav-wrapper">
-    <form class="search" align="right">
-        <div class="input-field">
-            <input id="search" type="search" required>
-            <label class="label-icon" for="search">
-                <i class="material-icons">search</i>
-            </label>
-            <i class="material-icons">close</i>
-        </div>
-    </form>
-</div>
+<br>
 
 <!--Container for inline elements (video API and in-page nav menu)-->
 <div class="container">
@@ -55,13 +40,7 @@
     <div class="card-tabs">
         <ul class="tabs tabs-fixed-width">
             <li class="tab">
-                <a href="#slack">SLACK</a>
-            </li>
-            <li class="tab">
-                <a class="active" href="#github">GITHUB</a>
-            </li>
-            <li class="tab">
-                <a href="#linkedin">LINKEDIN</a>
+                <a class="active" href="#github">search</a>
             </li>
         </ul>
     <!--We can add as many tabs as we need, so let's discuss which services we might like to connect-->
@@ -69,9 +48,6 @@
 
     <!--Inner-menu content-->
     <div class="card-content grey lighten-4">
-        <div id="slack">
-            <iframe src="https://www.giantbomb.com" height="550" width="400"></iframe>
-        </div>
         <div id="github">
             <script>
             (function() {
@@ -85,9 +61,6 @@
             })();
         </script>
         <gcse:search></gcse:search>
-        </div>
-        <div id="linkedin">
-            <iframe src="https://www.giantbomb.com" height="550" width="400"></iframe>
         </div>
     </div>
 </div>
@@ -104,7 +77,7 @@
             </div>
             <div class="row">
                 <div class="col s12">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="waves-effect waves-teal btn-flat">Submit</button>
                 </div>
             </div>
         </form>
@@ -129,8 +102,8 @@
                      </span>
                      
                         
-                        <button type="submit" class="btn btn-danger edit-btn" data-note="{{this.note}}" data-noteid="{{this.id}}">edit note</button>
-                         <button class="btn btn-danger delete-btn" data-note="{{this.note}}" data-noteid="{{this.id}}">delete note</button>
+                        <button type="submit" class="waves-effect waves-teal btn-flat edit-btn tiny material-icons" data-note="{{this.note}}" data-noteid="{{this.id}}">edit</button>
+                        <button class="waves-effect waves-teal btn-flat delete-btn tiny material-icons" data-note="{{this.note}}" data-noteid="{{this.id}}">close</button>
                  
                     </li>
                     {{/each}}
@@ -138,3 +111,4 @@
             
         </div>
     </div>
+

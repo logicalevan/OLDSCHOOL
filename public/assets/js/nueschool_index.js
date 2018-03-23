@@ -1,7 +1,5 @@
- // $(document).on("click", ".edit-btn", editNote);
-
-  var currentNote;
-  var id=0;
+var currentNote;
+var id=0;
 
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
@@ -9,7 +7,7 @@ $(function() {
   $(".notes-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
-
+    var note=$("note-input");
     var newNote = {
       note: $("#note-input").val().trim(),
     };
@@ -33,12 +31,10 @@ $(function() {
     id = $(this).data("noteid");
     console.log(id);
     document.getElementById("edit-box").style.display = "inline";
-
   });
 
   $(".delete-btn").on("click", function(event) {
     var id = $(this).data("noteid");
-
     // Send the DELETE request.
     $.ajax("/api/notes/" + id, {
       type: "DELETE",
@@ -50,11 +46,7 @@ $(function() {
       }
     );
   });
-
 });
-
-
-
 
 $(".edit-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
@@ -65,7 +57,6 @@ $(".edit-form").on("submit", function(event) {
       note: $("#edit-box").val().trim(),
     };
     console.log(editNote);
-
     // Send the POST request.
     $.ajax("/api/notes/" + id, {
       type: "PUT",

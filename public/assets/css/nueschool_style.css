@@ -1,3 +1,8 @@
+body {
+    font-family: 'Crimson Text', serif;
+    background-image: url("download.jpg");
+}
+
 nav .brand-logo {
     color: #fff;
     display: inline-block;
@@ -30,4 +35,30 @@ nav .brand-logo {
 
 #search {
     height: 45px;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+    background-color: transparent;
+    color: #5e5b5c;
+    font-size: 29px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.waves-effect waves-teal btn-flat delete-btn tiny material-icons {
+    font-size: 17px;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+    opacity: .5;
+    font-size: 29px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.grey.darken-4 {
+    background-color: black !important;
+    opacity: .5;
 }

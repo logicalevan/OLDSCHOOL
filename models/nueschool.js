@@ -25,7 +25,6 @@ var note={
       cb(res);
     });
   }
-
 }
 
 module.exports = note;
